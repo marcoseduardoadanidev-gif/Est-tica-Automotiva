@@ -9,6 +9,7 @@ public class OrdensServico {
     private LocalDateTime dataEntrada;
     private LocalDateTime dataSaida;
     private Funcionarios funcionario;
+    private String status;
     private Clientes cliente;
     private Checklists checklist;
     private ArrayList<ServicosOs> listaServicos = new ArrayList<ServicosOs>();
@@ -21,15 +22,17 @@ public class OrdensServico {
         codigo = 0;
         dataEntrada = LocalDateTime.now();
         dataSaida = LocalDateTime.now();
+        status = new String();
         listaServicos = new ArrayList<>();
         pagamento = new ArrayList<>();
     }
 
-    public OrdensServico(int codigo, LocalDateTime dataEntrada, LocalDateTime dataSaida, Funcionarios funcionario,
+    public OrdensServico(int codigo, LocalDateTime dataEntrada, LocalDateTime dataSaida, String status, Funcionarios funcionario,
         Clientes cliente, Checklists checklist, ArrayList<ServicosOs>listaServicos, ArrayList<PagamentosOs> pagamento) {
         this.codigo = codigo;
         this.dataEntrada = dataEntrada;
         this.dataSaida = dataSaida;
+        this.status = status;
         this.funcionario = funcionario;
         this.cliente = cliente;
         this.checklist = checklist;
@@ -79,6 +82,14 @@ public class OrdensServico {
         this.dataSaida = dataSaida;
     }
 
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    } 
+
     public Funcionarios getFuncionario() {
         return funcionario;
     }
@@ -114,7 +125,8 @@ public class OrdensServico {
         String idChecklist = (checklist != null) ? String.valueOf(checklist.getId()) : "N/A";
 
         return "OrdensServico [Numero = " + codigo + ", dataEntrada = " + dataEntrada + ", dataSaida = " + dataSaida
-                + ", funcionario = [" + nomeFunc + "], cliente = [" + nomeCli + "], Checklist ID = " + idChecklist + "]";
-    } 
+                + ", funcionario = [" + nomeFunc + "], cliente = [" + nomeCli + "], Checklist ID = " + idChecklist + "]" + "Status da OS [ " + status + "]" ;
+    }
+
     
 }

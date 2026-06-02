@@ -4,20 +4,20 @@ public class Servicos {
 
     private int codigo;
     private double valor;
-    private String nomeServico;
+    private String tipo;
 
     // Contructors
 
     public Servicos(){
         codigo = 0;
         valor = 0.0;
-        nomeServico = new String();
+        tipo = new String();
     }
 
-    public Servicos(int codigo, double valor, String nomeServico){
+    public Servicos(int codigo, double valor, String tipo){
         this.codigo = codigo;
         this.valor = valor;
-        this.nomeServico = nomeServico;
+        this.tipo = tipo;
     }
 
     //Getters and Setters
@@ -38,17 +38,17 @@ public class Servicos {
         this.valor = valor;
     }
 
-    public String getNomeServico() {
-        return nomeServico;
+    public String getTipoServico() {
+        return tipo;
     }
 
-    public void setNomeServico(String nomeServico) {
-        this.nomeServico = nomeServico;
+    public void setTipoServico(String tipo) {
+        this.tipo = tipo;
     }
 
     public String toString(){
 
-        return "Serviço [" + nomeServico + "]" + "Valor R$ " + valor;
+        return "Serviço [" + tipo + "]" + "Valor R$ " + valor;
     }
     
 }

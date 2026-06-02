@@ -4,6 +4,7 @@ public class ItensChecklist {
 
     private String status;
     private String observacao;
+    private int qtd;
     private Itens item;
     private Checklists checklist;
 
@@ -12,13 +13,16 @@ public class ItensChecklist {
     public ItensChecklist(){
         status = new String();
         observacao = new String();
+        qtd = 0;
     }
 
-    public ItensChecklist(String status, String observacao ,Itens item, Checklists checklist) {
+    public ItensChecklist(String status, String observacao, int qtd ,Itens item, Checklists checklist) {
         this.status = status;
         this.observacao = observacao;
+         this.qtd = qtd;
         this.item = item;
         this.checklist = checklist;
+       
     }
 
     // Getters and Setters
@@ -38,6 +42,14 @@ public class ItensChecklist {
 
     public void setObservacao(String observacao) {
         this.observacao = observacao;
+    }
+
+    public int getQtd() {
+        return qtd;
+    }
+
+    public void setQtd(int qtd) {
+        this.qtd = qtd;
     }
 
     public Itens getItem() {

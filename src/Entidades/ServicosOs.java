@@ -48,7 +48,7 @@ public class ServicosOs {
 
         // Validação para evitar NullPointer
 
-        String nomeServico = (servico != null) ? servico.getNomeServico() : "Serviço não definido";
+        String nomeServico = (servico != null) ? servico.getTipoServico() : "Serviço não definido";
         String nrProtocolo = (os != null) ? String.valueOf(os.getCodigo()) : "O.S não encontrada";
 
         return "Serviço [" + nomeServico + "]" + ", Realizado na O.S de numero : " + nrProtocolo;

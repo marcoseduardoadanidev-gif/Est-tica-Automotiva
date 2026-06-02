@@ -4,32 +4,32 @@ import java.time.LocalDateTime;
 
 public class Pagamentos {
 
-    private int codigo;
+    private int id;
     private String tipo;
     private LocalDateTime dataPagamento;
 
     // Constructors
 
     public Pagamentos(){
-        codigo = 0;
+        id = 0;
         tipo = new String();
         dataPagamento = LocalDateTime.now();
     }
 
-    public Pagamentos(int codigo, String tipo, LocalDateTime dataPagamento){
-        this.codigo = codigo;
+    public Pagamentos(int id, String tipo, LocalDateTime dataPagamento){
+        this.id = id;
         this.tipo = tipo;
         this.dataPagamento = dataPagamento;
     }
 
     // Getters and Setters
 
-    public int getCodigo() {
-        return codigo;
+    public int getId() {
+        return id;
     }
 
-    public void setCodigo(int codigo) {
-        this.codigo = codigo;
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getTipo() {
@@ -52,7 +52,7 @@ public class Pagamentos {
 
     public String toString(){
 
-        return "Pagamento via [" + tipo + "]" + "Realizado na data [ " + dataPagamento + " ]";
+        return "Pagamento via [" + tipo + "]" + "Realizado na data [ " + dataPagamento + " ID (" + id + ")" + "]";
     }
 
     

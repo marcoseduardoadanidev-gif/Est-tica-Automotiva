@@ -82,7 +82,7 @@ public class Veiculos {
     public String toString() {
         
         // Validação para evitar erro (NullPointer)
-        String tipoCategoria = (categoria != null) ? categoria.getTipo() : "N/A";
+        String tipoCategoria = (categoria != null) ? categoria.getClassificacao() : "N/A";
         
         return "Veiculos [codigo=" + codigo + ", modelo=" + modelo + ", placa=" + placa + ", cor=" + cor
                 + ", categoria=" + tipoCategoria + "]";

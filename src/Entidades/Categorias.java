@@ -3,35 +3,35 @@ package Entidades;
 public class Categorias {
 
     private int codigo;
-    private String tipo;
+    private String classificacao;
 
     public Categorias(){
         codigo = 0;
-        tipo = new String();
+        classificacao = new String();
     }
 
-    public Categorias(int codigo, String tipo){
+    public Categorias(int codigo, String classificacao){
         this.codigo = codigo;
-        this.tipo = tipo;
+        this.classificacao = classificacao;
     }
 
     public int getCodigo(){
         return codigo;
     }
 
-    public String getTipo(){
-        return tipo;
+    public String getClassificacao(){
+        return classificacao;
     }
 
     public void setCodigo(int codigo){
         this.codigo = codigo;
     }
 
-    public void setTipo(String tipo){
-        this.tipo = tipo;
+    public void setClassificacao(String classificacao){
+        this.classificacao = classificacao;
     }
     
     public String toString(){
-        return "Categoria [" + tipo + "]";
+        return "Categoria [" + classificacao + "]";
     }
 }
